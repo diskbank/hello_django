@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>添加出版社信息</title>
+</head>
+<body>
+<form action="{% url 'add_publisher' %}" method="post">
+    {% csrf_token %}
+{#    名称：<input type="text" name="name"> <br>#}
+{#    地址：<input type="text" name="address"> <br>#}
+{#    城市：<input type="text" name="city"> <br>#}
+{#    省份：<input type="text" name="state_province"> <br>#}
+{#    国家：<input type="text" name="country"> <br>#}
+{#    网址：<input type="text" name="website"> <br>#}
+    {{ publisher_form.as_p }}
+    <input type="submit" value="提交"> <br>
+</form>
+</body>
+</html>
